@@ -1,9 +1,10 @@
 gerador de eventos aleatorios
     - definir quais sao esses eventos e o que eles fazem
      
-corrig  ir problema de movimentacao
+corrigir problema de movimentacao
 
-colocar gurus 
+
+receber escolhas do GURU
 implementar ui com o jogo
 
 create
