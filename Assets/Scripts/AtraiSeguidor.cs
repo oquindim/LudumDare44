@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class AtraiSeguidor : MonoBehaviour
 {
-	public int poder;
-	public int atraidos = 0;
 	private int total;
 	public GameObject objectWithOtherScript;
 	public GameObject templo;
 	public GameObject insatisfeito;
     public float radiusDecay;
 
+    public float radiusFactor;
+
+
+
 	private int direcao = 1;
+
+    public GameObject influenceRadius;
 
 
 
@@ -29,10 +33,10 @@ public class AtraiSeguidor : MonoBehaviour
     void ShrinkCollider () {
 
 
-        float radiusCollider = templo.GetComponent<CapsuleCollider>().radius;
+        float radiusCollider = GetComponent<CapsuleCollider>().radius;
 
         if (radiusCollider > 0) {
-            templo.GetComponent<CapsuleCollider>().radius = radiusCollider - radiusDecay * Time.deltaTime;
+            GetComponent<CapsuleCollider>().radius = radiusCollider - radiusDecay * Time.deltaTime;
         }
         
     }
@@ -40,7 +44,7 @@ public class AtraiSeguidor : MonoBehaviour
     public void ReceiveUIInput ( int input ) {
         
         if (input > 0) {
-            templo.GetComponent<CapsuleCollider>().radius = input;
+            GetComponent<CapsuleCollider>().radius = input;
         } else {
             DecreaseFollower( input );
         }
@@ -53,7 +57,6 @@ public class AtraiSeguidor : MonoBehaviour
 
         for (int i = 0; i < total; i++)
         {
-
             GenerateInsatisfeito();
         }
 
@@ -63,6 +66,7 @@ public class AtraiSeguidor : MonoBehaviour
 	void Update()
 	{
         ShrinkCollider();
+        InfluenceRadiusSizer();
 	}
 
 
@@ -80,6 +84,11 @@ public class AtraiSeguidor : MonoBehaviour
 
         direcao = direcao * -1;
         objectWithOtherScript.GetComponent<DataController>().add();
+    }
+
+    void InfluenceRadiusSizer() {
+        float newscale = GetComponent<CapsuleCollider>().radius * radiusFactor;
+        influenceRadius.transform.localScale = new Vector3 (newscale,transform.localScale.y,newscale);
     }
 
 }
