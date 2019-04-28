@@ -15,6 +15,9 @@ public class DataController : MonoBehaviour
 	public int preacher = 1;
 	public int pull = 0;
 
+    //
+    public GameObject temple;
+
 
 	// References
 	public Button speakButton;
@@ -26,6 +29,10 @@ public class DataController : MonoBehaviour
 	   widouthInteraction = Time.deltaTime;
 	   InvokeRepeating("increasetribute", 0, 5f);
 	//    InvokeRepeating("decreaseFollowers", 0, 3f);
+
+
+
+
 	}
 	private void increasetribute(){
 		tribute += followers;
@@ -44,10 +51,12 @@ public class DataController : MonoBehaviour
 	// Start is called before the first frame update
 	public void increaseFollowers () {
 		int rand =  Random.Range(-3,10);
-		pull = rand;
 		if(followers == 0 && rand < 0){
 			rand = 0;
 		}
+
+        temple.GetComponent <AtraiSeguidor>().ReceiveUIInput(rand);
+
 		float tm1 = Time.deltaTime;
 		StartCoroutine(Example());
 		followers+= rand;

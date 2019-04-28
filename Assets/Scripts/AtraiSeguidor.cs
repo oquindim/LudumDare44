@@ -10,33 +10,76 @@ public class AtraiSeguidor : MonoBehaviour
 	public GameObject objectWithOtherScript;
 	public GameObject templo;
 	public GameObject insatisfeito;
+    public float radiusDecay;
 
 	private int direcao = 1;
-	void OnTriggerEnter(Collider other)
+
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        
+          GameObject otherObject = other.gameObject;
+          otherObject.GetComponent<MoveSeguidor>().atraido = true;
+          Debug.Log("entrou");
+          objectWithOtherScript.GetComponent<DataController>().remove();
+
+    }
+
+    void ShrinkCollider () {
+
+
+        float radiusCollider = templo.GetComponent<CapsuleCollider>().radius;
+
+        if (radiusCollider > 0) {
+            templo.GetComponent<CapsuleCollider>().radius = radiusCollider - radiusDecay * Time.deltaTime;
+        }
+        
+    }
+
+    public void ReceiveUIInput ( int input ) {
+        
+        if (input > 0) {
+            templo.GetComponent<CapsuleCollider>().radius = input;
+        } else {
+            DecreaseFollower( input );
+        }
+    }
+
+    void DecreaseFollower(int input)
+    {
+
+        int total = input * -1;
+
+        for (int i = 0; i < total; i++)
+        {
+
+            GenerateInsatisfeito();
+        }
+
+    }
+
+
+	void Update()
 	{
-		int val = objectWithOtherScript.GetComponent<DataController>().pull;
-		print(val);
-		if (val > 0 ) {
-			GameObject otherObject = other.gameObject;
-			otherObject.GetComponent<MoveSeguidor>().atraido = true;
-			Debug.Log("entrou");
-			atraidos = atraidos + 1;
-			objectWithOtherScript.GetComponent<DataController>().remove();
-		} else if(val < 0) {
-
-			GameObject objetoGerado = Instantiate(insatisfeito, templo.transform.position, Quaternion.identity, transform);
-			objetoGerado.transform.position = new Vector3(direcao * 0.1f, objetoGerado.transform.position.y, objetoGerado.transform.position.z);
-
-			if (objetoGerado.transform.position.x < 0)
-			{
-				objetoGerado.transform.Rotate(0, -180, 0);
-			}
-
-			objetoGerado.SetActive(true);
-			Destroy(objetoGerado, 40);
-
-			direcao = direcao * -1;
-			objectWithOtherScript.GetComponent<DataController>().add();
-		}
+        ShrinkCollider();
 	}
+
+
+    void GenerateInsatisfeito() {
+        GameObject objetoGerado = Instantiate(insatisfeito, templo.transform.position, Quaternion.identity, transform);
+
+        objetoGerado.transform.position = new Vector3(direcao * 0.1f, objetoGerado.transform.position.y, objetoGerado.transform.position.z);
+
+        if (objetoGerado.transform.position.x < 0)
+        {
+            objetoGerado.transform.Rotate(0, -180, 0);
+        }
+        objetoGerado.SetActive(true);
+        Destroy(objetoGerado, 40);
+
+        direcao = direcao * -1;
+        objectWithOtherScript.GetComponent<DataController>().add();
+    }
+
 }

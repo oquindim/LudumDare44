@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -385,12 +385,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followers: 0
-  level: 1
+  level: 13
   tribute: 0
   speakDelay: 1
   widouthInteraction: 0
   preacher: 1
   pull: 0
+  temple: {fileID: 1241944523}
   speakButton: {fileID: 1098621549}
   progressSpeaker: {fileID: 1677883277}
   fol: {fileID: 1395982824}
@@ -1311,7 +1312,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 7.29
+  m_Radius: 6.71
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -1332,6 +1333,7 @@ MonoBehaviour:
   objectWithOtherScript: {fileID: 149418016}
   templo: {fileID: 1241944523}
   insatisfeito: {fileID: 1126280210}
+  radiusDecay: 1
 --- !u!1 &1372361625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,6 +1764,7 @@ GameObject:
   - component: {fileID: 1629053790}
   - component: {fileID: 1629053793}
   - component: {fileID: 1629053792}
+  - component: {fileID: 1629053791}
   m_Layer: 0
   m_Name: Guru
   m_TagString: Untagged
@@ -1776,7 +1779,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629053789}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.010623023, y: -0.975119, z: -0.21618083, w: 0.047916092}
   m_LocalPosition: {x: 1.067, y: 0.195, z: 3.895}
   m_LocalScale: {x: 0.5112559, y: 0.5112559, z: 0.5112559}
   m_Children:
@@ -1784,6 +1787,25 @@ Transform:
   m_Father: {fileID: 1504917246}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1183024399 &1629053791
+LookAtConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629053789}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_Roll: 0
+  m_WorldUpObject: {fileID: 0}
+  m_UseUpObject: 0
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 241984782}
+    weight: 1
 --- !u!33 &1629053792
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class GeradorSeguidor : MonoBehaviour
 	void Update()
 	{
 
-		templo.GetComponent<CapsuleCollider>().radius = Random.Range(3f, 3.5f);
+		//templo.GetComponent<CapsuleCollider>().radius = Random.Range(3f, 3.5f);
 		if (i < f)
 		{
 

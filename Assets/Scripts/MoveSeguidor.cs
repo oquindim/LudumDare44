@@ -30,7 +30,13 @@ public class MoveSeguidor : MonoBehaviour
 	{
 		if (atraido) {
 
-			transform.position = new Vector3(transform.position.x - velocidade * Time.deltaTime * 0.1f, transform.position.y, Mathf.Lerp(transform.position.z, templo.transform.position.z, 0.01f) );
+            transform.position = new Vector3 (
+                Mathf.Lerp(transform.position.x, templo.transform.position.x, 0.01f),
+                transform.position.y,
+                Mathf.Lerp(transform.position.z, templo.transform.position.z, 0.01f)
+
+                ); 
+
 
 		} else {
 			transform.position = new Vector3(transform.position.x - velocidade * Time.deltaTime * 0.1f, transform.position.y, transform.position.z);
