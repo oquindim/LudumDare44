@@ -16,11 +16,9 @@ public class AtraiSeguidor : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
         int val = objectWithOtherScript.GetComponent<DataController>().pull;
-        print(val);
         if (val > 0 ) {
             GameObject otherObject = other.gameObject;
             otherObject.GetComponent<MoveSeguidor>().atraido = true;
-            Debug.Log("entrou");
             atraidos = atraidos + 1;
             objectWithOtherScript.GetComponent<DataController>().remove();
         } else if(val < 0) {
