@@ -5,8 +5,7 @@ using UnityEngine;
 public class GeradorSeguidor : MonoBehaviour
 {
 
-	public GameObject cubo; // objeto a ser clonado
-	public GameObject templo; // objeto a ser clonado
+	public GameObject original; // objeto a ser clonado
 	public float temp = 0;
 	public int startX = 3;
 	public float frequencia = 1;
@@ -21,13 +20,10 @@ public class GeradorSeguidor : MonoBehaviour
 
 	}
 
-
-
 	// Update is called once per frame
 	void Update()
 	{
 
-		templo.GetComponent<CapsuleCollider>().radius = Random.Range(3f, 3.5f);
 		if (i < f)
 		{
 
@@ -47,7 +43,7 @@ public class GeradorSeguidor : MonoBehaviour
 
 		Vector3 pos = new Vector3(startX, 0, Random.Range(-3f, 3f));
 
-		GameObject objetoGerado = Instantiate(cubo, pos, Quaternion.identity, transform);
+		GameObject objetoGerado = Instantiate(original, pos, Quaternion.identity);
 
 		if (startX < 0) {
 			objetoGerado.transform.Rotate(0, -180, 0);

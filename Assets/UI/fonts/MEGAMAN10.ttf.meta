@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 57082eac4bdab447199ab06f2f12f5ff
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 50
+  forceTextureCase: 1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MEGAMAN10
+  fontNames:
+  - MEGAMAN10
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
