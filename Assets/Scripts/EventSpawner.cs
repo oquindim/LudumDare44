@@ -95,7 +95,7 @@ public class EventSpawner : MonoBehaviour
 
     void Start()
     {
-        float waitTime = Random.Range(180, 300);
+        float waitTime = Random.Range(3, 5);
         InvokeRepeating("RandomEventSpawner", 0, waitTime);
     }
 

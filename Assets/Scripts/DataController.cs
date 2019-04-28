@@ -52,6 +52,19 @@ public class DataController : MonoBehaviour
         followers+= rand;
         fol.text = followers.ToString();
     }
+
+	public void addTribute(int value)
+	{
+		tribute += value;
+        tributeLabel.text = "$" + tribute.ToString();
+	}
+
+	public void addFollowers(int value)
+	{
+		followers += value;
+		fol.text = followers.ToString();
+	}
+
     public void remove() {
         pull--;
     }
