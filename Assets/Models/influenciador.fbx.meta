@@ -1,45 +1,21 @@
 fileFormatVersion: 2
-guid: 2cc3c76fefbdb4da8b0d80a431739e63
+guid: a7fd9d7067a3544fca5b6d8512547778
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: CINEMA_4D_Editor
-    100002: Cube
-    100004: Cylinder
-    100006: Sphere
-    100008: Symmetry
-    100010: Templo
-    100012: //RootNode
-    100014: Torus
-    400000: CINEMA_4D_Editor
-    400002: Cube
-    400004: Cylinder
-    400006: Sphere
-    400008: Symmetry
-    400010: Templo
-    400012: //RootNode
-    400014: Torus
-    2000000: CINEMA_4D_Editor
-    2100000: Mat.3
-    2100002: Mat.2
-    2100004: Mat
-    2100006: Mat.1
-    2300000: Cube
-    2300002: Cylinder
-    2300004: Sphere
-    2300006: Symmetry
-    2300008: Torus
-    3300000: Cube
-    3300002: Cylinder
-    3300004: Sphere
-    3300006: Symmetry
-    3300008: Torus
-    4300000: Cylinder
-    4300002: Cube
-    4300004: Torus
-    4300006: Sphere
-    4300008: Symmetry
+    100000: Disc
+    100002: //RootNode
+    400000: Disc
+    400002: //RootNode
+    2100000: No Name
+    2300000: Disc
+    3300000: Disc
+    4300000: Disc
+<<<<<<< HEAD:Assets/Models/influenciadorPregador.c4d.meta
+    4300002: Disc_2
     2186277476908879412: ImportLogs
+=======
+>>>>>>> 092827af9fd35ecac519488cf8fc118d97065e57:Assets/Models/influenciador.fbx.meta
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -71,14 +47,14 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.01
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
