@@ -65,34 +65,8 @@ public class AtraiSeguidor : MonoBehaviour
 
 	void Update()
 	{
-<<<<<<< HEAD
-		int val = objectWithOtherScript.GetComponent<DataController>().pull;
-		if (val > 0 ) {
-			GameObject otherObject = other.gameObject;
-			otherObject.GetComponent<MoveSeguidor>().atraido = true;
-			Debug.Log("entrou");
-			atraidos = atraidos + 1;
-			objectWithOtherScript.GetComponent<DataController>().remove();
-		} else if(val < 0) {
-
-			GameObject objetoGerado = Instantiate(insatisfeito, templo.transform.position, Quaternion.identity, transform);
-			objetoGerado.transform.position = new Vector3(direcao * 0.1f, objetoGerado.transform.position.y, objetoGerado.transform.position.z);
-
-			if (objetoGerado.transform.position.x < 0)
-			{
-				objetoGerado.transform.Rotate(0, -180, 0);
-			}
-
-			objetoGerado.SetActive(true);
-			Destroy(objetoGerado, 40);
-
-			direcao = direcao * -1;
-			objectWithOtherScript.GetComponent<DataController>().add();
-		}
-=======
         ShrinkCollider();
         InfluenceRadiusSizer();
->>>>>>> 2e094d02ed56f21d7ca90efc05aaf243e6653c2e
 	}
 
 
