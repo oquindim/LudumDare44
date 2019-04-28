@@ -5,8 +5,8 @@ using UnityEngine;
 public class Destruidor : MonoBehaviour
 {
 
-    void OnTriggerEnter(Collider other)
-    {
-        Destroy(other.gameObject);
-    }
+	void OnTriggerEnter(Collider other)
+	{
+		Destroy(other.gameObject);
+	}
 }
