@@ -12,6 +12,7 @@ public class ActionButton : MonoBehaviour
     Button btn;
     Slider progressSpeaker;
     public float delay;
+    public int toIncrease;
     public bool avaiable;
     void Start() {
         btn = GetComponent<Button>();
@@ -31,7 +32,7 @@ public class ActionButton : MonoBehaviour
     {
         float timer = 0;
         btn.interactable = false;
-    
+        print("pro " + progressSpeaker.value);
         while (timer < delay)
         {   
             timer += 0.02f;

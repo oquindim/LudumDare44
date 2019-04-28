@@ -467,10 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 
-  label: {fileID: 8508630505978896370}
-  btn: {fileID: 8508630506362656360}
-  progressSpeaker: {fileID: 8508630505908175752}
-  delay: 0
+  delay: 0.4
   avaiable: 0
 --- !u!1 &8508630506491732028
 GameObject:

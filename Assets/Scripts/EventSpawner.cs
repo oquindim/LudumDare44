@@ -83,19 +83,11 @@ public class EventSpawner : MonoBehaviour
             controller.addFollowers(addValue);
         }
 
-        print(System.String.Format(
-            "Operator: {0} - Text: {1} - Value: {2}",
-            selectedEvent.Operator,
-            selectedEvent.Text,
-            addValue
-            )
-        );
-
     }
 
     void Start()
     {
-        float waitTime = Random.Range(3, 5);
+        float waitTime = Random.Range(300, 500);
         InvokeRepeating("RandomEventSpawner", 0, waitTime);
     }
 
