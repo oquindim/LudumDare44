@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 030ec4c2904504f62b157127d50846f0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cylinder
+    100004: Cylinder_2_Instance_3
+    100006: Cylinder_2_Instance_4
+    100008: Cylinder_2_Instance_5
+    100010: Cylinder_2_Instance_6
+    100012: Sphere
+    100014: Symmetry
+    100016: //RootNode
+    100018: Torus
+    100020: Cylinder_2
+    100022: Cylinder_2_2
+    100024: Cylinder_2_3
+    100026: Cylinder_2_4
+    400000: Cube
+    400002: Cylinder
+    400004: Cylinder_2_Instance_3
+    400006: Cylinder_2_Instance_4
+    400008: Cylinder_2_Instance_5
+    400010: Cylinder_2_Instance_6
+    400012: Sphere
+    400014: Symmetry
+    400016: //RootNode
+    400018: Torus
+    400020: Cylinder_2
+    400022: Cylinder_2_2
+    400024: Cylinder_2_3
+    400026: Cylinder_2_4
+    2100000: Mat.3
+    2100002: Mat.2
+    2100004: Mat
+    2100006: Mat.1
+    2100008: Templo.janelas
+    2100010: Templo.madeira
+    2100012: Templo.paredes
+    2100014: Templo.colunas
+    2300000: Cube
+    2300002: Cylinder
+    2300004: Sphere
+    2300006: Symmetry
+    2300008: Torus
+    2300010: Cylinder_2
+    2300012: Cylinder_2_2
+    2300014: Cylinder_2_3
+    2300016: Cylinder_2_4
+    3300000: Cube
+    3300002: Cylinder
+    3300004: Sphere
+    3300006: Symmetry
+    3300008: Torus
+    3300010: Cylinder_2
+    3300012: Cylinder_2_2
+    3300014: Cylinder_2_3
+    3300016: Cylinder_2_4
+    4300000: Cylinder
+    4300002: Cube
+    4300004: Torus
+    4300006: Sphere
+    4300008: Symmetry
+    4300010: Cylinder_2
+    4300012: Cylinder_2_2
+    4300014: Cylinder_2_3
+    4300016: Cylinder_2_4
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Templo.colunas
+    second: {fileID: 2100000, guid: 24850aabf1b374d6587f6f955e0a1fb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Templo.janelas
+    second: {fileID: 2100000, guid: 8cb38d92a504749e29bbc5c2ae60188e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Templo.madeira
+    second: {fileID: 2100000, guid: a615f28aff60f40eeb9e8d8ec7a071e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Templo.paredes
+    second: {fileID: 2100000, guid: 8b16a10a230884ce7a4c6536f493ce5d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
