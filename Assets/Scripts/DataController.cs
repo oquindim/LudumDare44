@@ -16,6 +16,7 @@ public class DataController : MonoBehaviour
 
 
     // References
+    public GameObject temple;
     public Button speakButton;
     public Text fol;
     public Text tributeLabel;
@@ -46,7 +47,7 @@ public class DataController : MonoBehaviour
         if(followers == 0 && rand < 0){
             rand = 0;
         }
-        speakButton.GetComponent<ActionButton>().blockButton();
+        temple.GetComponent <AtraiSeguidor>().ReceiveUIInput(rand);
         print("rand: "+ rand);
         followers+= rand;
         fol.text = followers.ToString();
