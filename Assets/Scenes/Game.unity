@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3639c776750a4ac438bbf0a58bac4e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 8508630506362656360, guid: 96173226d169ff348aba7df3bf96cf21, type: 3}
   followers: 0
   level: 13
   tribute: 0
@@ -319,6 +320,7 @@ MonoBehaviour:
   speakButton: {fileID: 1098621549}
   fol: {fileID: 1395982824}
   tributeLabel: {fileID: 1636250929}
+  Buttons: {fileID: 2131837267}
 --- !u!4 &149418018
 Transform:
   m_ObjectHideFlags: 0
@@ -362,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataController: {fileID: 149418016}
-  drawer: {fileID: 0}
+  btn: {fileID: 1916745515}
 --- !u!1 &225708442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a7fd9d7067a3544fca5b6d8512547778,
@@ -542,7 +544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &387841380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -576,7 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -839,6 +841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10023ff0042cc42dba14a1ffd5b2473f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectWithOtherScript: {fileID: 149418016}
 --- !u!1 &728088842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,7 +2722,7 @@ PrefabInstance:
     - target: {fileID: 8508630506362656367, guid: 96173226d169ff348aba7df3bf96cf21,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000024796
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 8508630506362656367, guid: 96173226d169ff348aba7df3bf96cf21,
         type: 3}
