@@ -11,6 +11,7 @@ create
     - criar paroquia
     - criar canal de tv
     - creiar evangelizador
+    - converter um evangelizador
 
 upgrades
     - upgrade da caaba
@@ -20,15 +21,14 @@ upgrades
     - aumentar dizimo
 
 powerup
-    - distribuir correntes em redes socias
-    - colocar alguem na politica
-    - publicar livro em outra lingua
-    - comprar um rancho
-    - converter um evangelizador
-    - enviar missionario
-    - marcar passeata
+    1. distribuir correntes em redes socias
+    6. colocar alguem na politica
+    4. publicar livro em outra lingua
+    7. comprar um rancho
+    5. enviar missionario
+    3. marcar passeata
     - "missa"
-    - orar
+    2. orar
     - evocar fim do mundo
 
 comandos de pause,exit
