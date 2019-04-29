@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2825,6 +2825,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8508630506362656360, guid: 96173226d169ff348aba7df3bf96cf21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 149418017}
+    - target: {fileID: 8508630506362656360, guid: 96173226d169ff348aba7df3bf96cf21,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8508630506362656367, guid: 96173226d169ff348aba7df3bf96cf21,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2888,7 +2898,7 @@ PrefabInstance:
     - target: {fileID: 8508630506362656367, guid: 96173226d169ff348aba7df3bf96cf21,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 41.3
+      value: 0.0000038146973
       objectReference: {fileID: 0}
     - target: {fileID: 8508630506362656367, guid: 96173226d169ff348aba7df3bf96cf21,
         type: 3}
@@ -2929,16 +2939,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8508630506362656360, guid: 96173226d169ff348aba7df3bf96cf21,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 149418017}
-    - target: {fileID: 8508630506362656360, guid: 96173226d169ff348aba7df3bf96cf21,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8508630505908175752, guid: 96173226d169ff348aba7df3bf96cf21,
         type: 3}

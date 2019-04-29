@@ -2,47 +2,42 @@
     "Items": [
         {
             "Name": "Send chain messages on social network",
-            "value": 10,
+            "value": 40,
             "delay": 1
         },
         {
             "Name": "Organize an event",
-            "value": 20,
+            "value": 80,
             "delay": 5
         },
         {
             "Name": "Publish The Book",
-            "value": 30,
+            "value": 160,
             "delay": 8
         },
         {
             "Name": "Organize a parade",
-            "value": 50,
+            "value": 320,
             "delay": 10
         },
         {
             "Name": "Translate The Book to another language",
-            "value": 1000,
+            "value": 640,
             "delay": 15
         },
         {
             "Name": "Send a missionary",
-            "value": 5000,
+            "value": 1280,
             "delay": 60
         },     
         {
             "Name": "Have a Congressman among your followers",
-            "value": 10000,
+            "value": 2560,
             "delay": 100
         },
         {
-            "Name": "Build a retreat center for your cult",
-            "value": 100000,
-            "delay": 150
-        },
-        {
             "Name": "Evoke the end of the world",
-            "value": 50000000000,
+            "value": 10240,
             "delay": 180
         }        
     ]

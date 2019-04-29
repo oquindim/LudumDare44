@@ -84,13 +84,17 @@ public class DataController : MonoBehaviour
 	{
 		followers += value;
 
-		if(followers >= nextButton) {
+		if(followers >= nextButton && stats < els.GetLength(0)) {
 			Button newButton = Instantiate(prefab);
 			newButton.transform.SetParent(Buttons.transform, false);
-			nextButton += nextButton;
+			nextButton = nextButton +10;
 			newButton.GetComponent<ActionButton>().setText(els[stats].Name);
 			newButton.GetComponent<ActionButton>().setValue(els[stats].value);
 			newButton.GetComponent<ActionButton>().setDelay(els[stats].delay);
+            Vector3 pos = Buttons.transform.position;
+            pos.y += stats * 70f + 110;
+            pos.x = 120;
+            newButton.transform.position = pos;
 			// button bt =newButton.addComponent<PowerupButton>() as Button;
 			newButton.onClick.AddListener(() => {
 				addFollowers(els[stats].value);
