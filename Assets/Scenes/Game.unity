@@ -2220,10 +2220,10 @@ MonoBehaviour:
   objectWithOtherScript: {fileID: 149418016}
   templo: {fileID: 514052264}
   insatisfeito: {fileID: 1126280210}
-  radiusDecay: 1
+  radiusDecay: 0.8
   radiusFactor: 1
   influenceRadius: {fileID: 225708442}
-  inputRate: 0.4
+  inputRate: 0.6
 --- !u!1 &1636250927
 GameObject:
   m_ObjectHideFlags: 0

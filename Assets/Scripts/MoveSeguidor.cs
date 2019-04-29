@@ -30,10 +30,12 @@ public class MoveSeguidor : MonoBehaviour
 	{
 		if (atraido) {
 
+			float fatorDist = 1/Vector3.Distance(transform.position, templo.transform.position);
+
             transform.position = new Vector3 (
-                Mathf.Lerp(transform.position.x, templo.transform.position.x, 0.5f * Time.deltaTime),
+                Mathf.Lerp(transform.position.x, templo.transform.position.x, fatorDist * Time.deltaTime),
                 transform.position.y,
-                Mathf.Lerp(transform.position.z, templo.transform.position.z, 0.5f * Time.deltaTime)
+                Mathf.Lerp(transform.position.z, templo.transform.position.z, fatorDist * Time.deltaTime)
 
                 ); 
 
