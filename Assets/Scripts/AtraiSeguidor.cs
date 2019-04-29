@@ -38,13 +38,28 @@ public class AtraiSeguidor : MonoBehaviour
 
     public void ReceiveUIInput ( int input ) {
         
-        if (input > 0) {
-            GetComponent<CapsuleCollider>().radius = GetComponent<CapsuleCollider>().radius + input*inputRate;
-        } else {
-            DecreaseFollower( input );
-        }
-    }
+        if (input < 0) {
+            DecreaseFollower( input ); 
+        } 
 
+        float radio = GetComponent<CapsuleCollider>().radius;
+        
+        if (radio > 0) {
+            if (radio < 4 ) 
+            {
+                GetComponent<CapsuleCollider>().radius = radio * 2f;
+            } else if (radio < 8) {
+                GetComponent<CapsuleCollider>().radius = radio + radio * 0.2f;
+            } else if (radio < 14) {
+                GetComponent<CapsuleCollider>().radius = radio + radio * 0.1f;
+            }
+        } else {
+            GetComponent<CapsuleCollider>().radius = 1.5f;
+        }
+
+        
+    }
+    
     void DecreaseFollower(int input)
     {
 

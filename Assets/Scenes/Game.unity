@@ -975,7 +975,7 @@ MonoBehaviour:
   radiusDecay: 0
   radiusFactor: 0.8
   influenceRadius: {fileID: 2131351663}
-  inputRate: 0
+  inputRate: 0.01
 --- !u!1183024399 &804995195
 LookAtConstraint:
   m_ObjectHideFlags: 0
