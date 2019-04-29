@@ -20,7 +20,7 @@ public class UI_Screen_Setup : UI_Screen
 	public virtual void SetupGameOptions()
 	{
 
-		PlayerPrefs.SetInt("GuruType", 0);
+		
 		if (guruNameInput.text != null || guruNameInput.text != "")
 		{
 			PlayerPrefs.SetString("GuruName", guruNameInput.text);
@@ -34,5 +34,7 @@ public class UI_Screen_Setup : UI_Screen
 			PlayerPrefs.SetString("CultName", cultNameInput.text);
 		}
 	}
+
+
 	#endregion
 }

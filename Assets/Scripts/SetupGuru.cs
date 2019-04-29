@@ -16,4 +16,9 @@ public class SetupGuru : MonoBehaviour
     {
         
     }
+
+    void InstantiateTemple (int guruLevel) {
+        GameObject templeAsset  = Resources.Load ("templo" + guruLevel.ToString()) as GameObject;
+        GameObject temple = Instantiate(templeAsset,transform) as GameObject;
+    }
 }
