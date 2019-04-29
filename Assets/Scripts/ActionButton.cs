@@ -32,7 +32,6 @@ public class ActionButton : MonoBehaviour
     {
         float timer = 0;
         btn.interactable = false;
-        print("pro " + progressSpeaker.value);
         while (timer < delay)
         {   
             timer += 0.02f;

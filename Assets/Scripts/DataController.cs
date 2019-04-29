@@ -46,7 +46,6 @@ public class DataController : MonoBehaviour
     void Start (){
        InvokeRepeating("increasetribute", 0, 5f);
 	   els = LoadJSON();
-		print(els.GetLength(0));
     }
     private void increasetribute(){
         tribute += followers;

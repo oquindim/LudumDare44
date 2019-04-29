@@ -42,11 +42,11 @@ public class EventSpawner : MonoBehaviour
         int followers = controller.followers;
         int tribute  = controller.tribute;
 
-        int addValue = 0;
-
-        // object events = EventOptions.CreateFromJSON(options);
+        int addValueFollowers = (int) Mathf.Round(followers * 0.1f);
+        int addValueTribute = (int) Mathf.Round(tribute * 0.2f);
 
         // Carrega JSON com eventos
+
         EventOptions[] events = LoadJSON(eventsFileName);
 
         int eventsLenght = events.GetLength(0);
@@ -54,32 +54,35 @@ public class EventSpawner : MonoBehaviour
         int randomEvent = Random.Range(0, eventsLenght);
 
         // Seleciona evento randomicamente
-        // TODO: passar valores para %
-        EventOptions selectedEvent = events[3];
 
-        if (selectedEvent.Operator == "Add")
-        {
-            addValue = Random.Range(0, 100);
+        EventOptions selectedEvent = events[randomEvent];
 
-        } else
+        if (selectedEvent.Operator == "Sub")
         {
-            addValue = Random.Range(-50, -1);
+            addValueFollowers *= -1;
+            addValueTribute *= -1;
+
         }
 
         if (selectedEvent.Type == "Tribute")
         {
-            controller.addTribute(addValue);
+            controller.addTribute(addValueTribute);
 
-        } else if (selectedEvent.Type == "Followers")
+            print(addValueTribute);
+
+        }
+        else if (selectedEvent.Type == "Followers")
         {
-            controller.addFollowers(addValue);
+            controller.addFollowers(addValueFollowers);
+
+            print(addValueFollowers);
         }
 
         string popUpMessage = System.String.Format(
-            "{0}. {1}: {2}",
+            "{0}. {1}: {2}.",
             selectedEvent.Text,
             selectedEvent.Type,
-            addValue
+            selectedEvent.Operator
         );
 
         btn.GetComponent<DrawPopUp>().Show(popUpMessage);
