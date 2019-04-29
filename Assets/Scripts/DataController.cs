@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DataController : MonoBehaviour
 {
     // Attributes
+	public Button prefab;
     public int followers = 0; // number of Followers
     public int level = 1; // Actual level
     public int tribute = 0; // total of tributes
@@ -14,21 +16,42 @@ public class DataController : MonoBehaviour
     public int preacher = 1;
     public int pull = 0;
 
-
-    // References
     public GameObject temple;
     public Button speakButton;
     public Text fol;
     public Text tributeLabel;
+	public GameObject Buttons;
+	Powerups[] els;
+    private string gameDataFileName = "powerups.json";
 
-    void Start (){
-       widouthInteraction = Time.deltaTime;
-       InvokeRepeating("increasetribute", 0, 5f);
+	int nextButton = 50;
+
+    public Powerups[] LoadJSON()
+    {
+        string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
+
+        if (File.Exists(filePath))
+        {
+            string dataAsJson = File.ReadAllText(filePath);
+
+            Powerups[] loadedData = JsonHelper.FromJson<Powerups>(dataAsJson);
+
+            return loadedData;
+        }
+
+        return null;
     }
 
+
+    void Start (){
+       InvokeRepeating("increasetribute", 0, 5f);
+	   els = LoadJSON();
+		print(els.GetLength(0));
+    }
     private void increasetribute(){
         tribute += followers;
         tributeLabel.text = "$" + tribute.ToString();
+	   
     }
 
     private void decreaseFollowers(){
@@ -44,15 +67,10 @@ public class DataController : MonoBehaviour
     public void increaseFollowers () {
         int rand =  Random.Range(-3,10);
         pull = rand;
-        if(followers == 0 && rand < 0){
-            rand = 0;
-        }
+        if(followers == 0 && rand < 0){  rand = 0;}
         temple.GetComponent <AtraiSeguidor>().ReceiveUIInput(rand);
-        print("rand: "+ rand);
-        followers+= rand;
-        fol.text = followers.ToString();
+        speakButton.GetComponent<ActionButton>().blockButton();
     }
-
 	public void addTribute(int value)
 	{
 		tribute += value;
@@ -62,6 +80,18 @@ public class DataController : MonoBehaviour
 	public void addFollowers(int value)
 	{
 		followers += value;
+		fol.text = followers.ToString();
+
+		if(followers >= nextButton) {
+			Button objetoGerado = Instantiate(prefab);
+			objetoGerado.transform.SetParent(Buttons.transform, false);
+			nextButton += nextButton;
+		}
+		
+	}
+	public void removeFollowers(int value)
+	{
+		followers -= value;
 		fol.text = followers.ToString();
 	}
 

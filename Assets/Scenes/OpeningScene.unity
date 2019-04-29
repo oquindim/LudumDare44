@@ -847,9 +847,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1579647276}
-        m_MethodName: LoadScene
-        m_Mode: 3
+      - m_Target: {fileID: 678678157}
+        m_MethodName: SetupGameOptions
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -949,10 +949,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 678678155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6fcf807fb294698ad57019ed930476, type: 3}
+  m_Script: {fileID: 11500000, guid: 57957692f8f9c41de8c3370d389984d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  u_StartSelectable: {fileID: 1630582945}
+  u_StartSelectable: {fileID: 0}
   onScreenStart:
     m_PersistentCalls:
       m_Calls: []
@@ -963,6 +963,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  cultNameInput: {fileID: 897597079}
+  hollyBookNameInput: {fileID: 254406855}
+  guruNameInput: {fileID: 1630582945}
 --- !u!114 &678678158
 MonoBehaviour:
   m_ObjectHideFlags: 0

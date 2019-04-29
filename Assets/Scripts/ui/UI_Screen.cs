@@ -9,53 +9,53 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(CanvasGroup))]
 public class UI_Screen : MonoBehaviour
 {
-#region Variables
-[Header("Main Properties")]
-public Selectable u_StartSelectable;
+	#region Variables
+	[Header("Main Properties")]
+	public Selectable u_StartSelectable;
 
-[Header("Screen Events")]
-public UnityEvent onScreenStart = new UnityEvent();
-public UnityEvent onScreenClose = new UnityEvent();
-private Animator animator;
-#endregion
-// Start is called before the first frame update
-void Start()
-{
-	animator = GetComponent<Animator>();
-
-	if (u_StartSelectable)
+	[Header("Screen Events")]
+	public UnityEvent onScreenStart = new UnityEvent();
+	public UnityEvent onScreenClose = new UnityEvent();
+	private Animator animator;
+	#endregion
+	// Start is called before the first frame update
+	void Start()
 	{
-		EventSystem.current.SetSelectedGameObject(u_StartSelectable.gameObject);
+		animator = GetComponent<Animator>();
+
+		if (u_StartSelectable)
+		{
+			EventSystem.current.SetSelectedGameObject(u_StartSelectable.gameObject);
+		}
+
 	}
 
-}
-
-#region Helpers
-public virtual void StartScreen()
-{
-	if (onScreenStart != null)
+	#region Helpers
+	public virtual void StartScreen()
 	{
-		onScreenStart.Invoke();
+		if (onScreenStart != null)
+		{
+			onScreenStart.Invoke();
+		}
+		HandleAnimator("OpenScreen");
 	}
-	HandleAnimator("OpenScreen");
-}
-public virtual void CloseScreen()
-{
-	if (onScreenClose != null)
+	public virtual void CloseScreen()
 	{
-	onScreenClose.Invoke();
+		if (onScreenClose != null)
+		{
+			onScreenClose.Invoke();
+		}
+		HandleAnimator("CloseScreen");
 	}
-	HandleAnimator("CloseScreen");
-}
-void HandleAnimator(string uTrigger)
-{
-	if (animator)
+	void HandleAnimator(string uTrigger)
 	{
-		animator.SetTrigger(uTrigger);
-	} else {
-	  animator = GetComponent<Animator>();
-	  animator.SetTrigger(uTrigger);
+		if (animator)
+		{
+			animator.SetTrigger(uTrigger);
+		} else {
+			animator = GetComponent<Animator>();
+			animator.SetTrigger(uTrigger);
+		}
 	}
-}
-#endregion
+	#endregion
 }

@@ -9,32 +9,77 @@ ModelImporter:
     100006: Symmetry
     100008: //RootNode
     100010: Torus
+    100012: Cylinder_1
+    100014: Cylinder_1_2
+    100016: Subdivision_Surface
     400000: Cube
     400002: Cylinder
     400004: Sphere
     400006: Symmetry
     400008: //RootNode
     400010: Torus
+    400012: Cylinder_1
+    400014: Cylinder_1_2
+    400016: Subdivision_Surface
     2100000: Mat.3
     2100002: Mat.2
     2100004: Mat
     2100006: Mat.1
+    2100008: Templo.madeira
+    2100010: Templo.janelas
+    2100012: Templo.paredes
     2300000: Cube
     2300002: Cylinder
     2300004: Sphere
     2300006: Symmetry
     2300008: Torus
+    2300010: Cylinder_1
+    2300012: Cylinder_1_2
     3300000: Cube
     3300002: Cylinder
     3300004: Sphere
     3300006: Symmetry
     3300008: Torus
+    3300010: Cylinder_1
+    3300012: Cylinder_1_2
     4300000: Cylinder
     4300002: Cube
     4300004: Torus
     4300006: Sphere
     4300008: Symmetry
-  externalObjects: {}
+    4300010: Cylinder_1
+    4300012: Cylinder_1_2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1
+    second: {fileID: 2100000, guid: 24850aabf1b374d6587f6f955e0a1fb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: c1efc5e1bb7354531a975d65588b035e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.3
+    second: {fileID: 2100000, guid: e062307bd579646dfaca034819c6253e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Templo.janelas
+    second: {fileID: 2100000, guid: 8cb38d92a504749e29bbc5c2ae60188e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Templo.madeira
+    second: {fileID: 2100000, guid: a615f28aff60f40eeb9e8d8ec7a071e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Templo.paredes
+    second: {fileID: 2100000, guid: 8b16a10a230884ce7a4c6536f493ce5d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

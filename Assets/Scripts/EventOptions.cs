@@ -22,6 +22,24 @@ public class EventOptions
     }
 
 }
+[System.Serializable]
+public class Powerups
+{
+
+    // public string name;
+    // public int lives;
+    // public float health;
+    public string Name;
+    public string Operator;
+    public string Type;
+    public string Text;
+
+    public static Powerups CreateFromJSON(string json)
+    {
+        return JsonUtility.FromJson<Powerups>(json);
+    }
+
+}
 
 public static class JsonHelper
 {
