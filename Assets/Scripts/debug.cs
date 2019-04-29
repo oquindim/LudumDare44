@@ -19,7 +19,7 @@ public class debug : MonoBehaviour
         {
             Time.timeScale = 1;
         } else {
-            Time.timeScale = 10;
+            Time.timeScale = 50;
         }
         
     }
