@@ -39,8 +39,8 @@ public class EventSpawner : MonoBehaviour
         }
         var controller = dataController.GetComponent<DataController> ();  
         
-        int followers = controller.followers;
-        int tribute  = controller.tribute;
+        long followers = controller.followers;
+        long tribute  = controller.tribute;
 
         int addValueFollowers = (int) Mathf.Round(followers * 0.1f);
         int addValueTribute = (int) Mathf.Round(tribute * 0.2f);

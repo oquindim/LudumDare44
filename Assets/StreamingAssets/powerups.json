@@ -1,28 +1,49 @@
 {
     "Items": [
         {
-            "Name": "CopsBribe",
-            "Operator": "Sub",
-            "Type": "Tribute",
-            "Text": "Cops have arrived and asked for bribe."
+            "Name": "distribuir correntes em redes socias",
+            "value": 10,
+            "delay": 1
         },
         {
-            "Name": "CantPayTheBills",
-            "Operator": "Sub",
-            "Type": "Tribute",
-            "Text": "Followers shares could not pay your bills."
+            "Name": "roda de oração",
+            "value": 20,
+            "delay": 5
         },
         {
-            "Name": "WonALawSuit",
-            "Operator": "Add",
-            "Type": "Tribute",
-            "Text": "A follower has prosecuted you in the past and you won the judicial battle."
+            "Name": "Missa",
+            "value": 30,
+            "delay": 8
         },
         {
-            "Name": "FarReaches",
-            "Operator": "Add",
-            "Type": "Followers",
-            "Text": "Your word has reached the far reaches of the city."
+            "Name": "marcar passeata",
+            "value": 50,
+            "delay": 10
+        },
+        {
+            "Name": "publicar livro em outra lingua",
+            "value": 1000,
+            "delay": 15
+        },
+        {
+            "Name": "enviar missionario",
+            "value": 5000,
+            "delay": 60
+        },     
+        {
+            "Name": "colocar alguem na politica",
+            "value": 10000,
+            "delay": 100
+        },
+        {
+            "Name": "comprar um rancho",
+            "value": 100000,
+            "delay": 150
+        },
+        {
+            "Name": "evocar fim do mundo",
+            "value": 50000000000,
+            "delay": 180
         }        
     ]
 }
