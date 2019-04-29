@@ -11,6 +11,7 @@ public class EventSpawner : MonoBehaviour
     public GameObject dataController;
 
     public Button btn;
+    int counter = 0;
     
     // public DrawPopUp drawer;
 
@@ -32,6 +33,10 @@ public class EventSpawner : MonoBehaviour
 
     public void RandomEventSpawner()
     {
+        if(counter == 0) {
+            counter++;
+            return;
+        }
         var controller = dataController.GetComponent<DataController> ();  
         
         int followers = controller.followers;
