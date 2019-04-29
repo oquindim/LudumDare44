@@ -4,25 +4,25 @@
             "Name": "CopsBribe",
             "Operator": "Sub",
             "Type": "Tribute",
-            "Text": "Cops have arrived and asked for bribe."
+            "Text": "Cops have arrived and asked for bribe"
         },
         {
             "Name": "CantPayTheBills",
             "Operator": "Sub",
             "Type": "Tribute",
-            "Text": "Followers shares could not pay your bills."
+            "Text": "Followers shares could not pay your bills"
         },
         {
             "Name": "WonALawSuit",
             "Operator": "Add",
             "Type": "Tribute",
-            "Text": "A follower has prosecuted you in the past and you won the judicial battle."
+            "Text": "A follower has prosecuted you in the past and you won the judicial battle"
         },
         {
             "Name": "FarReaches",
             "Operator": "Add",
             "Type": "Followers",
-            "Text": "Your word has reached the far reaches of the city."
+            "Text": "Your word has reached the far reaches of the city"
         }        
     ]
 }

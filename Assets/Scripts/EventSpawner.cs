@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EventSpawner : MonoBehaviour
 {
-    private string gameDataFileName = "events.json";
+    private string eventsFileName = "events.json";
     public GameObject dataController;
 
-    public bool cooldown = false;
+    public Button btn;
+    
+    // public DrawPopUp drawer;
 
-    public EventOptions[] LoadJSON()
+    public EventOptions[] LoadJSON(string fileName)
     {
-        string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
+        string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
 
         if (File.Exists(filePath))
         {
@@ -27,42 +30,26 @@ public class EventSpawner : MonoBehaviour
         return null;
     }
 
-    IEnumerator Example()
-	{
-		float timer = 0;
-
-		while (timer < 10)
-		{
-			timer += 0.02f;
-
-			if (timer >= 10) {
-                cooldown = true;
-			}
-			yield return new WaitForSeconds(0.02f);
-		}
-	}
- 
-    private void RandomEventSpawner()
+    public void RandomEventSpawner()
     {
-        var controller = dataController.GetComponent<DataController>();  
+        var controller = dataController.GetComponent<DataController> ();  
         
         int followers = controller.followers;
         int tribute  = controller.tribute;
 
         int addValue = 0;
 
-        float randomEventCooldown = Random.Range(5, 10);
-
         // object events = EventOptions.CreateFromJSON(options);
 
         // Carrega JSON com eventos
-        EventOptions[] events = LoadJSON();
+        EventOptions[] events = LoadJSON(eventsFileName);
 
         int eventsLenght = events.GetLength(0);
 
         int randomEvent = Random.Range(0, eventsLenght);
 
         // Seleciona evento randomicamente
+        // TODO: passar valores para %
         EventOptions selectedEvent = events[3];
 
         if (selectedEvent.Operator == "Add")
@@ -83,19 +70,19 @@ public class EventSpawner : MonoBehaviour
             controller.addFollowers(addValue);
         }
 
-        print(System.String.Format(
-            "Operator: {0} - Text: {1} - Value: {2}",
-            selectedEvent.Operator,
+        string popUpMessage = System.String.Format(
+            "{0}. {1}: {2}",
             selectedEvent.Text,
+            selectedEvent.Type,
             addValue
-            )
         );
 
+        btn.GetComponent<DrawPopUp>().Show(popUpMessage);
     }
 
     void Start()
     {
-        float waitTime = Random.Range(3, 5);
+        float waitTime = Random.Range(300, 360);
         InvokeRepeating("RandomEventSpawner", 0, waitTime);
     }
 
