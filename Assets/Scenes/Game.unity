@@ -975,6 +975,7 @@ MonoBehaviour:
   radiusDecay: 0
   radiusFactor: 0.8
   influenceRadius: {fileID: 2131351663}
+  inputRate: 0
 --- !u!1183024399 &804995195
 LookAtConstraint:
   m_ObjectHideFlags: 0
@@ -2222,6 +2223,7 @@ MonoBehaviour:
   radiusDecay: 1
   radiusFactor: 1
   influenceRadius: {fileID: 225708442}
+  inputRate: 0.4
 --- !u!1 &1636250927
 GameObject:
   m_ObjectHideFlags: 0

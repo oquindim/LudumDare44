@@ -9,14 +9,10 @@ public class AtraiSeguidor : MonoBehaviour
 	public GameObject templo;
 	public GameObject insatisfeito;
     public float radiusDecay;
-
     public float radiusFactor;
-
-
-
 	private int direcao = 1;
-
     public GameObject influenceRadius;
+    public float inputRate;
 
 
 
@@ -43,7 +39,7 @@ public class AtraiSeguidor : MonoBehaviour
     public void ReceiveUIInput ( int input ) {
         
         if (input > 0) {
-            GetComponent<CapsuleCollider>().radius = input;
+            GetComponent<CapsuleCollider>().radius = GetComponent<CapsuleCollider>().radius + input*inputRate;
         } else {
             DecreaseFollower( input );
         }

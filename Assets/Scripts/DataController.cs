@@ -68,7 +68,7 @@ public class DataController : MonoBehaviour
 
     // Start is called before the first frame update
     public void increaseFollowers () {
-        int rand =  Random.Range(-3,10);
+        int rand =  Random.Range(-3,6);
         pull = rand;
         if(followers == 0 && rand < 0){  rand = 0;}
         temple.GetComponent <AtraiSeguidor>().ReceiveUIInput(rand);
