@@ -30,9 +30,8 @@ public class Powerups
     // public int lives;
     // public float health;
     public string Name;
-    public string Operator;
-    public string Type;
-    public string Text;
+    public float delay;
+    public int value;
 
     public static Powerups CreateFromJSON(string json)
     {

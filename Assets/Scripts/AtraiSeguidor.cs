@@ -25,7 +25,6 @@ public class AtraiSeguidor : MonoBehaviour
         
           GameObject otherObject = other.gameObject;
           otherObject.GetComponent<MoveSeguidor>().atraido = true;
-          Debug.Log("entrou");
           objectWithOtherScript.GetComponent<DataController>().remove();
 
     }
