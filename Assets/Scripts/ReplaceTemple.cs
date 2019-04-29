@@ -14,7 +14,7 @@ public class ReplaceTemple : MonoBehaviour
 
     public void ReplaceTempleInput (int templeLevel) {
         
-        GameObject previewTemple = transform.FindChild("templo"+(templeLevel-1).ToString()+"(Clone)").gameObject;
+        GameObject previewTemple = transform.Find("templo"+(templeLevel-1).ToString()+"(Clone)").gameObject;
         Destroy (previewTemple);
         GameObject templeAsset  = Resources.Load ("templo" + templeLevel.ToString()) as GameObject;
         GameObject temple = Instantiate(templeAsset,transform) as GameObject;
