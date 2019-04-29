@@ -1,10 +1,10 @@
 gerador de eventos aleatorios
     - definir quais sao esses eventos e o que eles fazem
      
-corrigir problema de movimentacao
-
+ok - corrigir problema de movimentacao
 
 receber escolhas do GURU
+
 implementar ui com o jogo
 
 create
@@ -32,5 +32,4 @@ powerup
     - evocar fim do mundo
 
 comandos de pause,exit
-
 guardar e carregar o jogo

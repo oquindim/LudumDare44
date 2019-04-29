@@ -25,6 +25,7 @@ public class DataController : MonoBehaviour
     private string gameDataFileName = "powerups.json";
 
 	int nextButton = 50;
+	int stats = 0;
 
     public Powerups[] LoadJSON()
     {
@@ -46,7 +47,6 @@ public class DataController : MonoBehaviour
     void Start (){
        InvokeRepeating("increasetribute", 0, 5f);
 	   els = LoadJSON();
-		print(els.GetLength(0));
     }
     private void increasetribute(){
         tribute += followers;
@@ -86,6 +86,8 @@ public class DataController : MonoBehaviour
 			Button objetoGerado = Instantiate(prefab);
 			objetoGerado.transform.SetParent(Buttons.transform, false);
 			nextButton += nextButton;
+			objetoGerado.GetComponent<ActionButton>().setText(els[stats].Name);
+			stats+=1;
 		}
 		
 	}
