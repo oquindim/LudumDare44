@@ -8,9 +8,9 @@ public class DataController : MonoBehaviour
 {
     // Attributes
 	public Button prefab;
-    public int followers = 0; // number of Followers
+    public long followers = 0; // number of Followers
     public int level = 1; // Actual level
-    public int tribute = 0; // total of tributes
+    public long tribute = 0; // total of tributes
     public float speakDelay = 0.5f; // total in sec to press button speak
     public float widouthInteraction = 0; // total time widouth an interaction
     public int preacher = 1;
@@ -48,6 +48,9 @@ public class DataController : MonoBehaviour
        InvokeRepeating("increasetribute", 0, 5f);
 	   els = LoadJSON();
     }
+	void Update(){
+		fol.text = followers.ToString();
+	}
     private void increasetribute(){
         tribute += followers;
         tributeLabel.text = "$" + tribute.ToString();
@@ -58,7 +61,7 @@ public class DataController : MonoBehaviour
         float spent = widouthInteraction - Time.deltaTime;
         if(spent > 100) {
             followers -= 5;
-            fol.text = followers.ToString();
+            
             widouthInteraction = Time.deltaTime;
         }
     }
@@ -80,21 +83,27 @@ public class DataController : MonoBehaviour
 	public void addFollowers(int value)
 	{
 		followers += value;
-		fol.text = followers.ToString();
 
 		if(followers >= nextButton) {
-			Button objetoGerado = Instantiate(prefab);
-			objetoGerado.transform.SetParent(Buttons.transform, false);
+			Button newButton = Instantiate(prefab);
+			newButton.transform.SetParent(Buttons.transform, false);
 			nextButton += nextButton;
-			objetoGerado.GetComponent<ActionButton>().setText(els[stats].Name);
+			newButton.GetComponent<ActionButton>().setText(els[stats].Name);
+			newButton.GetComponent<ActionButton>().setValue(els[stats].value);
+			newButton.GetComponent<ActionButton>().setDelay(els[stats].delay);
+			// button bt =newButton.addComponent<PowerupButton>() as Button;
+			newButton.onClick.AddListener(() => {
+				addFollowers(els[stats].value);
+				newButton.GetComponent<ActionButton>().blockButton();
+				});
 			stats+=1;
 		}
 		
 	}
+
 	public void removeFollowers(int value)
 	{
 		followers -= value;
-		fol.text = followers.ToString();
 	}
 
     public void remove() {

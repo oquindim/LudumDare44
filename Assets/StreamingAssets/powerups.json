@@ -2,48 +2,48 @@
     "Items": [
         {
             "Name": "distribuir correntes em redes socias",
-            "Value": 30,
+            "value": 10,
             "delay": 1
         },
         {
             "Name": "roda de oração",
-            "Value": 30,
-            "delay": 1
+            "value": 20,
+            "delay": 5
         },
         {
             "Name": "Missa",
-            "Value": 30,
-            "delay": 1
+            "value": 30,
+            "delay": 8
         },
         {
             "Name": "marcar passeata",
-            "Value": 30,
-            "delay": 1
+            "value": 50,
+            "delay": 10
         },
         {
             "Name": "publicar livro em outra lingua",
-            "Value": 30,
-            "delay": 1
+            "value": 1000,
+            "delay": 15
         },
         {
             "Name": "enviar missionario",
-            "Value": 30,
-            "delay": 1
+            "value": 5000,
+            "delay": 60
         },     
         {
             "Name": "colocar alguem na politica",
-            "Value": 30,
-            "delay": 1
+            "value": 10000,
+            "delay": 100
         },
         {
             "Name": "comprar um rancho",
-            "Value": 30,
-            "delay": 1
+            "value": 100000,
+            "delay": 150
         },
         {
             "Name": "evocar fim do mundo",
-            "Value": 30,
-            "delay": 1
+            "value": 50000000000,
+            "delay": 180
         }        
     ]
 }

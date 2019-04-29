@@ -12,27 +12,38 @@ public class ActionButton : MonoBehaviour
     Button btn;
     Slider progressSpeaker;
     public float delay;
-    public int toIncrease;
+    public int value;
     public bool avaiable;
     void Start() {
         btn = GetComponent<Button>();
         label = btn.GetComponentInChildren<Text>();
         progressSpeaker = btn.GetComponentInChildren<Slider>();
         label.text = text;
+
+    }
+    public void blockButton() {
+        print("progress");
+        StartCoroutine(Progress());
+    
     }
 
-    public void blockButton() {StartCoroutine(Progress());}
+    public void a() {
+		print('s');
+	}
     public float getDelay() {return delay;}
     public void setDelay(float input) {delay = input;}
     public string getText() {return text;}
     public void setText(string input) {text = input;}
-
+    public int getValue() {return value;}
+    public void setValue(int input) {
+        value = input;
+        }
+    
     // calculate the transition on progress bar 
     IEnumerator Progress()
     {
         float timer = 0;
         btn.interactable = false;
-        print("pro " + progressSpeaker.value);
         while (timer < delay)
         {   
             timer += 0.02f;
