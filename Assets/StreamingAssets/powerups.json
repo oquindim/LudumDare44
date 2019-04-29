@@ -1,47 +1,47 @@
 {
     "Items": [
         {
-            "Name": "distribuir correntes em redes socias",
+            "Name": "Send chain messages on social network",
             "value": 10,
             "delay": 1
         },
         {
-            "Name": "roda de oração",
+            "Name": "Organize an event",
             "value": 20,
             "delay": 5
         },
         {
-            "Name": "Missa",
+            "Name": "Publish The Book",
             "value": 30,
             "delay": 8
         },
         {
-            "Name": "marcar passeata",
+            "Name": "Organize a parade",
             "value": 50,
             "delay": 10
         },
         {
-            "Name": "publicar livro em outra lingua",
+            "Name": "Translate The Book to another language",
             "value": 1000,
             "delay": 15
         },
         {
-            "Name": "enviar missionario",
+            "Name": "Send a missionary",
             "value": 5000,
             "delay": 60
         },     
         {
-            "Name": "colocar alguem na politica",
+            "Name": "Have a Congressman among your followers",
             "value": 10000,
             "delay": 100
         },
         {
-            "Name": "comprar um rancho",
+            "Name": "Build a retreat center for your cult",
             "value": 100000,
             "delay": 150
         },
         {
-            "Name": "evocar fim do mundo",
+            "Name": "Evoke the end of the world",
             "value": 50000000000,
             "delay": 180
         }        
