@@ -31,9 +31,9 @@ public class MoveSeguidor : MonoBehaviour
 		if (atraido) {
 
             transform.position = new Vector3 (
-                Mathf.Lerp(transform.position.x, templo.transform.position.x, 0.01f),
+                Mathf.Lerp(transform.position.x, templo.transform.position.x, 0.5f * Time.deltaTime),
                 transform.position.y,
-                Mathf.Lerp(transform.position.z, templo.transform.position.z, 0.01f)
+                Mathf.Lerp(transform.position.z, templo.transform.position.z, 0.5f * Time.deltaTime)
 
                 ); 
 
