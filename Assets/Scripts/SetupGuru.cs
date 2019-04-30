@@ -8,7 +8,7 @@ public class SetupGuru : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InstantiateGuru ();
     }
 
     // Update is called once per frame
@@ -17,8 +17,9 @@ public class SetupGuru : MonoBehaviour
         
     }
 
-    void InstantiateTemple (int guruLevel) {
-        GameObject templeAsset  = Resources.Load ("templo" + guruLevel.ToString()) as GameObject;
+    void InstantiateGuru () {
+        int guruSetup = PlayerPrefs.GetInt("GuruType");
+        GameObject templeAsset  = Resources.Load ("guru" + guruSetup.ToString()) as GameObject;
         GameObject temple = Instantiate(templeAsset,transform) as GameObject;
     }
 }

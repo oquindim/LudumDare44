@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 149418019}
   - component: {fileID: 149418020}
   - component: {fileID: 149418021}
+  - component: {fileID: 149418022}
   m_Layer: 5
   m_Name: scripts
   m_TagString: Untagged
@@ -286,6 +287,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FastAndFurious: 0
+--- !u!114 &149418022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149418016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d5329927f824853b97153ae176a4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &225708442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a7fd9d7067a3544fca5b6d8512547778,
@@ -2052,6 +2065,7 @@ GameObject:
   - component: {fileID: 1629053792}
   - component: {fileID: 1629053791}
   - component: {fileID: 1629053794}
+  - component: {fileID: 1629053795}
   m_Layer: 0
   m_Name: Guru
   m_TagString: Untagged
@@ -2135,6 +2149,18 @@ MonoBehaviour:
   radiusFactor: 1
   influenceRadius: {fileID: 225708442}
   inputRate: 0.6
+--- !u!114 &1629053795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629053789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb2a25242f444a3d9ded7e3d59702bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636250927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Guru0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505208873993516522, guid: c23b48490d91943dbbff86220536b0df,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 505208873993516523, guid: c23b48490d91943dbbff86220536b0df,
         type: 3}
