@@ -14,19 +14,19 @@ public class ReplaceTemple : MonoBehaviour
 
     void Start() {
         levelAtual = 0;
-        InstantiateTemple(0);
+        InstantiateTemple(levelAtual);
     }
-    void Update() {
-        if (scriptExt.followers > levelArray[levelAtual]) {
-            levelAtual = levelAtual + 1;
-            ReplaceTempleGo (levelAtual);
-            Debug.Log("trocouLevel");
-        }
-    }
+    // void Update() {
+    //     if (scriptExt.getFollowers() > levelArray[levelAtual]) {
+    //         print(scriptExt.getFollowers());
+    //         levelAtual = levelAtual + 1;
+    //         ReplaceTempleGo (levelAtual);
+    //         Debug.Log("trocouLevel");
+    //     }
+    // }
 
-    void ReplaceTempleGo (int templeLevel) {
+    public void ReplaceTempleGo (int templeLevel) {
         
-
         Destroy (transform.Find("templo"+(templeLevel-1).ToString()+"(Clone)").gameObject);
 
         InstantiateTemple(templeLevel);

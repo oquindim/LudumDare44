@@ -42,9 +42,10 @@ public class EventSpawner : MonoBehaviour
         long followers = controller.followers;
         long tribute  = controller.tribute;
 
-        int addValueFollowers = (int) Mathf.Round(followers * 0.1f);
-        int addValueTribute = (int) Mathf.Round(tribute * 0.2f);
-
+        int addValueFollowers = Mathf.RoundToInt(followers * 0.01f);
+        int addValueTribute = Mathf.RoundToInt(tribute * 0.02f);
+        print(addValueFollowers);
+        print(followers);
         // Carrega JSON com eventos
 
         EventOptions[] events = LoadJSON(eventsFileName);
@@ -59,14 +60,13 @@ public class EventSpawner : MonoBehaviour
 
         if (selectedEvent.Operator == "Sub")
         {
-            addValueFollowers *= -1;
-            addValueTribute *= -1;
-
+            addValueFollowers = addValueFollowers * -1;
+            addValueTribute = addValueFollowers * -1;
         }
 
         if (selectedEvent.Type == "Tribute")
         {
-            controller.addTribute(addValueTribute);
+            controller.addTributeSpaw(addValueTribute);
 
             print(addValueTribute);
 

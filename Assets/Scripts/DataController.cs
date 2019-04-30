@@ -9,7 +9,6 @@ public class DataController : MonoBehaviour
     // Attributes
 	public Button prefab;
     public long followers = 0; // number of Followers
-    public int level = 1; // Actual level
     public long tribute = 0; // total of tributes
     public float speakDelay = 0.5f; // total in sec to press button speak
     public float widouthInteraction = 0; // total time widouth an interaction
@@ -17,6 +16,7 @@ public class DataController : MonoBehaviour
     public int pull = 0;
 
     public GameObject temple;
+    public GameObject temple2;
     public Button speakButton;
     public Text fol;
     public Text tributeLabel;
@@ -26,7 +26,8 @@ public class DataController : MonoBehaviour
 
 	int nextButton = 50;
 	int stats = 0;
-
+    private int[] levelArray = new int[]{100,500,2000,5000};
+    private int level = 0;
     public Powerups[] LoadJSON()
     {
         string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
@@ -79,15 +80,25 @@ public class DataController : MonoBehaviour
 		tribute += value;
         tributeLabel.text = "$" + tribute.ToString();
 	}
+	public void addTributeSpaw(int value)
+	{
+		tribute += value;
+        tributeLabel.text = "$" + tribute.ToString();
+	}
+	public long getFollowers(){return followers;}
 
 	public void addFollowers(int value)
 	{
 		followers += value;
+        if(followers > levelArray[level] && level < 3 && value > 0) {
+            level++;
+            temple2.GetComponent<ReplaceTemple>().ReplaceTempleGo(level);
+        }
 
-		if(followers >= nextButton && stats < els.GetLength(0)) {
+		if(followers >= nextButton && stats < els.GetLength(0) - 1) {
 			Button newButton = Instantiate(prefab);
 			newButton.transform.SetParent(Buttons.transform, false);
-			nextButton = nextButton +10;
+			nextButton = nextButton * 3 ;
 			newButton.GetComponent<ActionButton>().setText(els[stats].Name);
 			newButton.GetComponent<ActionButton>().setValue(els[stats].value);
 			newButton.GetComponent<ActionButton>().setDelay(els[stats].delay);
