@@ -15,6 +15,7 @@ public class GeraInsatisfeito : MonoBehaviour
 
 		GameObject objetoGerado = Instantiate(insatisfeito, templo.transform.position, Quaternion.identity, transform);
 		objetoGerado.transform.position = new Vector3(direcao * 0.1f, objetoGerado.transform.position.y, objetoGerado.transform.position.z);
+		
 
 		if (objetoGerado.transform.position.x < 0)
 		{

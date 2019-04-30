@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Required when Using UI elements.
 
-public class ReplaceTemple : MonoBehaviour
+public class SetupTemple : MonoBehaviour
 {
     
     public DataController scriptExt;
