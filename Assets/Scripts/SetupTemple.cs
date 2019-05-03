@@ -16,14 +16,7 @@ public class SetupTemple : MonoBehaviour
         levelAtual = 0;
         InstantiateTemple(levelAtual);
     }
-    // void Update() {
-    //     if (scriptExt.getFollowers() > levelArray[levelAtual]) {
-    //         print(scriptExt.getFollowers());
-    //         levelAtual = levelAtual + 1;
-    //         ReplaceTempleGo (levelAtual);
-    //         Debug.Log("trocouLevel");
-    //     }
-    // }
+
 
     public void ReplaceTempleGo (int templeLevel) {
         

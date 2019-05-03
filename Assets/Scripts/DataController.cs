@@ -92,7 +92,7 @@ public class DataController : MonoBehaviour
 		followers += value;
         if(followers > levelArray[level] && level < 3 && value > 0) {
             level++;
-            temple2.GetComponent<ReplaceTemple>().ReplaceTempleGo(level);
+            temple2.GetComponent<SetupTemple>().ReplaceTempleGo(level);
         }
 
 		if(followers >= nextButton && stats < els.GetLength(0) - 1) {
